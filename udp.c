@@ -49,7 +49,8 @@ int main() {
     printf("UDP Server listening on port %d...\n", PORT);
 
     // Receive messages
-    while (1) {
+    while (1) { 
+        
         memset(buffer, 0, BUFFER_SIZE); // Clear the buffer
 
         recvLen = recvfrom(udpSocket, buffer, BUFFER_SIZE, 0, (struct sockaddr*)&clientAddr, &clientAddrLen);
